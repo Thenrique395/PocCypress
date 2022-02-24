@@ -16,4 +16,4 @@ phases:
     commands:
       # - npm run start:ci &
       # - npx cypress run --record
-      - npm run open
+      - npx cypress run
