@@ -16,8 +16,10 @@ phases:
   pre_build:
     commands:
     #  export CYPRESS_VERIFY_TIMEOUT=60000 
-      - cypress verify
-      - cypress info
+      - npx cypress verify
+      - npx cypress info
+       -npx cypress cache list --size # verifica todas as vezes que foram instalada do cypress com o tamanho da pasta.
+      # - cypress cache clear // limpar as versoes instalada do cypress
   build:
     commands:
       - npx cypress run
