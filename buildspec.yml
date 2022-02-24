@@ -5,8 +5,8 @@ phases:
     runtime-versions:
       nodejs: latest
     commands:
-      # - npm ci
-      - npm install
+      - npm ci
+      # - npm install
   pre_build:
     commands:
       - npm run cy:verify
