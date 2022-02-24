@@ -5,6 +5,7 @@ phases:
     runtime-versions:
       nodejs: latest
     commands:
+      - cd cypress
       - npm ci
   pre_build:
     commands:
