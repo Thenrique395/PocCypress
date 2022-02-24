@@ -9,8 +9,9 @@ phases:
       # - npm install
   pre_build:
     commands:
-      - npm run cy:verify
-      - npm run cy:info
+    #  export CYPRESS_VERIFY_TIMEOUT=60000 
+    #   - npm run cy:verify
+    #   - npm run cy:info
   build:
     commands:
       - npm run start:ci &
