@@ -1,9 +1,8 @@
 version: 0.2
-# //teste
 phases:
   install:
     runtime-versions:
-      nodejs: latest
+      nodejs: 12
     commands:
       - export COMMIT_INFO_BRANCH="$(git rev-parse HEAD | xargs git name-rev |
         cut -d' ' -f2 | sed 's/remotes\/origin\///g')"
