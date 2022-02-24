@@ -3,8 +3,15 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: latest
+      nodejs: 14.17.5
     commands:
+      - export COMMIT_INFO_BRANCH="$(git rev-parse HEAD | xargs git name-rev |
+        cut -d' ' -f2 | sed 's/remotes\/origin\///g')"
+      - export COMMIT_INFO_MESSAGE="$(git log -1 --pretty=%B)"
+      - export COMMIT_INFO_EMAIL="$(git log -1 --pretty=%ae)"
+      - export COMMIT_INFO_AUTHOR="$(git log -1 --pretty=%an)"
+      - export COMMIT_INFO_SHA="$(git log -1 --pretty=%H)"
+      - export COMMIT_INFO_REMOTE="$(git config --get remote.origin.url)"
       - npm ci
       # - npm install
   pre_build:
