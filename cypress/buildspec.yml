@@ -8,6 +8,7 @@ phases:
       - npm ci
   pre_build:
     commands:
+      - cd cypress
       - npm run cy:verify
       - npm run cy:info
   build:
