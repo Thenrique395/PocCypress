@@ -21,4 +21,4 @@ phases:
       # - cypress cache clear // limpar as versoes instalada do cypress
   build:
     commands:
-      - npx cypress run
+      # - npx cypress run
