@@ -1,0 +1,17 @@
+version: 0.2
+# //teste
+phases:
+  install:
+    runtime-versions:
+      nodejs: latest
+    commands:
+      # - npm ci
+      - npm install
+  pre_build:
+    commands:
+      - npm run cy:verify
+      - npm run cy:info
+  build:
+    commands:
+      - npm run start:ci &
+      - npx cypress run --record
