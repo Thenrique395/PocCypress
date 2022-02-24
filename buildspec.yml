@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 14.16.0
+      nodejs: 14.17.5
     commands:
       # - export COMMIT_INFO_BRANCH="$(git rev-parse HEAD | xargs git name-rev |
       #   cut -d' ' -f2 | sed 's/remotes\/origin\///g')"
