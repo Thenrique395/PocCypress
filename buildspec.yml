@@ -16,8 +16,8 @@ phases:
   pre_build:
     commands:
     #  export CYPRESS_VERIFY_TIMEOUT=60000 
-      - npm run cy:verify
-      - npm run cy:info
+      - cypress verify
+      - cypress info
   build:
     commands:
       - npx cypress run
